@@ -1,3 +1,5 @@
+import logging
+
 class BasePage:
 
     def __init__(self, driver, base_url):
@@ -26,4 +28,11 @@ class BasePage:
         if self.get_url() == self.base_url:
             return True
         else:
+            return False
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
             return False
