@@ -25,3 +25,5 @@ class Tables(BasePage):
         self.rows_dropdown = WebElement(driver, 'span.select-wrap.-pageSizeOptions > select')
         self.pagination = WebElement(driver, 'span.-pageInfo')
         self.pagination_text = WebElement(driver, 'input[type=number]')
+
+        self.headers = WebElement(driver, '.rt-th')
